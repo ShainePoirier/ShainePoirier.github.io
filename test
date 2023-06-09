@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenge/Lab One </title>
+    <!-- Link our CSS page -->
+    <link rel = "stylesheet" href = "css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1> Shaine Poirier </h1>
+    </header>
+    <main>
+        <h2>A Little More About Me </h2>
+        <section>
+            <!--place image here-->
+            <figure>
+                <img src="./img/dog_img.JPG" alt="Image of a dog with its tongue out">
+                <figcaption>My goofy looking dog named Lola</figcaption>
+            </figure>
+        </section>
+        <!-- add a short paragraph about you -->
+        <p class = "paragraph">
+            Hello, my name is Shaine. Something that I am passionate about is fitness. I enjoy going to the gym and
+            pushing myself to get stronger. I used to work as a personal trainer. It gave me the opportunity to teach
+            clients how they can reach their fitness goals. The most difficult part of the job was trying to schedule
+            all of my clients. The work hours were also quite difficult. Some days I would start at 5 a.m. and would not
+            leave until 8 or 9 p.m. Ultimately, I decided that the job was not the best for me, so I went back to
+            college for computer programming.
+        </p>
+        <h3>A List of My Favourite Things</h3>
+        <ul>
+            <li>Food</li>
+            <li>Video games</li>
+            <li>Reading</li>
+            <li>Sports</li>
+        </ul>
+    </main>
+    <footer>
+        <p class = "paragraph"> CSS Challenge/Lab One - COMP1054 - Winter2023 </p>
+    </footer>
+</div>
+</body>
+</html>

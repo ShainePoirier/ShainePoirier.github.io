@@ -1,127 +1,110 @@
-/* Typography */
+/*
+* author: Shaine Poirier
+* description: CSS zen garden
+* date: 2023-06-17
+ */
 
-html {
-    font-family: 'Fira Sans', sans-serif;
-    scroll-behavior: smooth;
+/* Example of ID selector */
+#css-zen-garden{
+   padding: 0;
+    margin: 0;
+    background-color: #cccccc;
 }
+
+/*Typography */
 
 h1, h2, h3 {
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #0077ff;
 }
 
-p {
-    font-weight: 300;
-    line-height: 18px;
+h1{
+    font-size: 2.5rem;
 }
 
-
-/* Layout */
-
-.wrapper {
-    width: 80%;
-    margin: 0 auto;
+h2{
+    font-size: 2rem;
 }
 
-.flex {
-    display:flex;
-    gap: 32px;
+h3{
+    font-size: 1.5rem;
 }
 
-#features > div {
-    flex: 1;
-}
-
-img {
-    max-height: 300px;
-    width: auto;
-}
-
-main section {
-    padding: 60px 20px 0 20px;
-}
-
-/*Table*/
-#playlist > table{
-    table-layout: fixed;
-    width: 80%;
-    border-collapse: collapse;
-    border: 4px solid black;
-    font-size: 1.0rem;
-}
-
-thead th {
-    text-align: left;
-    text-decoration: underline;
+p, a, li{
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
 }
 
-tfoot td {
-    font-size: 1.0rem;
-    font-style: italic;
+/*Example of a type selector */
+p{
+    color: #333333;
 }
+/*******************************************************************/
 
-tbody tr:nth-of-type(odd) {
-    background-color: darkgray;
-}
-
-/*Style paragraph links */
-
-a {
-    outline: none;
-}
-
-a:link {
-    color: darkblue;
-}
-
-a:visited {
-    color: blueviolet;
-}
-
-a:focus, a:hover {
-    text-decoration: none;
-    background: pink;
-}
-
-a:active {
-    background: #6900ff;
-    color: pink;
-}
-
-/*Style nav links to look like buttons */
-
-nav{
-    display: flex;
-    gap: 10%;
-}
-nav > a {
-    flex: 1;
-    text-decoration: none;
-    outline: none;
+/* Example of a class selector. Also contains the required background image/gradient */
+.intro{
     text-align: center;
-    line-height: 5;
-    color: black;
+    background: radial-gradient(circle at top left, #FFD700, #FF8C00);
 }
 
-nav > a:link,
-nav > a:visited,
-nav > a:focus {
-    background: cornflowerblue;
-    color: black;
+/*Example of a direct sibling combinator */
+h1 + h2{
+    margin-top: 3.125rem;
 }
 
-nav > a:hover {
-    background: orange;
+/*Example of a general sibling combinator */
+h3 ~ p {
+    margin-top: 1.5rem;
 }
 
-nav > a:active {
-    background: pink;
-    color: white;
+/*******************************************************************/
+/*Style links and lists*/
+
+/*style links*/
+a{
+    text-decoration: none;
+    outline: none;
 }
 
-/*Style the lists */
+a:link{
+    color: #ff5500;
+}
 
-ol, ul{
-    font-size: 1.2rem;
-    list-style-position: inside;
+a:visited{
+    color: #336699;
+}
+
+a:focus{
+
+    color: #000000;
+    background-color: #ffcc00;
+}
+
+/*Example of a pseudo-class selector. Also counts as the 'creative element' for assignment */
+a:hover{
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+a:active{
+    color: #00ff00;
+    text-decoration: none;
+}
+
+/*style the lists*/
+
+/*Example of an attribute selector */
+a[class=design-name]{
+    color: #00a78e;
+}
+
+/*Example of a child combinator */
+.design-selection > h3{
+    text-align: center;
+}
+
+/*Example of a descendant combinator */
+.design-selection  li{
+    text-align: center;
+    list-style: none;
 }

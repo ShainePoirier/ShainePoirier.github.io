@@ -1,110 +1,93 @@
 /*
-* author: Shaine Poirier
-* description: CSS zen garden
-* date: 2023-06-17
+*Shaine Poirier
+*2023-07-20
+*CSS Challenge 3. Recreate the layout of a website using flex
  */
 
-/* Example of ID selector */
-#css-zen-garden{
-   padding: 0;
-    margin: 0;
-    background-color: #cccccc;
+/*Reposition the header with flex */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15rem;
+    background-color: orangered;
+}
+/*Style the first image and paragraph */
+.row-1{
+    display: flex;
+    height: 30rem;
 }
 
-/*Typography */
-
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0077ff;
+.row-1 > div{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
-h1{
-    font-size: 2.5rem;
+.row-1 > p{
+    background-color: aqua;
+    padding: 1rem;
+}
+/*Style the 2nd, 3rd, and 4th paragraphs */
+.row-2{
+    display: flex;
 }
 
-h2{
-    font-size: 2rem;
+.row-2 > p:nth-child(1){
+    background-color: orange;
+    margin-right: 1rem;
+    padding: 1rem;
 }
 
-h3{
-    font-size: 1.5rem;
+.row-2 > p:nth-child(2){
+    background-color: orange;
+    margin-right: 1rem;
+    padding: 1rem;
 }
 
-p, a, li{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+.row-2 > p:nth-child(3){
+    background-color: orange;
+    padding: 1rem;
+}
+/*Style the footer */
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 }
 
-/*Example of a type selector */
-p{
-    color: #333333;
-}
-/*******************************************************************/
-
-/* Example of a class selector. Also contains the required background image/gradient */
-.intro{
-    text-align: center;
-    background: radial-gradient(circle at top left, #FFD700, #FF8C00);
-}
-
-/*Example of a direct sibling combinator */
-h1 + h2{
-    margin-top: 3.125rem;
+footer > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    padding: 1rem;
+    margin-right: 0.2rem;
+    width: 100%;
+    height: 2.5rem;
+    flex-shrink: 2;
 }
 
-/*Example of a general sibling combinator */
-h3 ~ p {
-    margin-top: 1.5rem;
+footer > p:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    padding: 1rem;
+    width: 100%;
+    height: 2.5rem;
 }
 
-/*******************************************************************/
-/*Style links and lists*/
-
-/*style links*/
-a{
-    text-decoration: none;
-    outline: none;
-}
-
-a:link{
-    color: #ff5500;
-}
-
-a:visited{
-    color: #336699;
-}
-
-a:focus{
-
-    color: #000000;
-    background-color: #ffcc00;
-}
-
-/*Example of a pseudo-class selector. Also counts as the 'creative element' for assignment */
-a:hover{
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-a:active{
-    color: #00ff00;
-    text-decoration: none;
-}
-
-/*style the lists*/
-
-/*Example of an attribute selector */
-a[class=design-name]{
-    color: #00a78e;
-}
-
-/*Example of a child combinator */
-.design-selection > h3{
-    text-align: center;
-}
-
-/*Example of a descendant combinator */
-.design-selection  li{
-    text-align: center;
-    list-style: none;
+footer > p:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    padding: 1rem;
+    margin-right: 0.2rem;
+    width: 100%;
+    height: 2.5rem;
 }

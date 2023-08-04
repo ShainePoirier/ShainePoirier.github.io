@@ -1,93 +1,160 @@
-/*
-*Shaine Poirier
-*2023-07-20
-*CSS Challenge 3. Recreate the layout of a website using flex
+/*Shaine Poirier
+*2023-08-04
+*CSS Challenge 4
  */
 
-/*Reposition the header with flex */
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 15rem;
-    background-color: orangered;
-}
-/*Style the first image and paragraph */
-.row-1{
-    display: flex;
-    height: 30rem;
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
 }
 
-.row-1 > div{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+html {
+    font: 1.2em/1.4 Arial, Helvetica, sans-serif;
 }
 
-.row-1 > p{
-    background-color: aqua;
-    padding: 1rem;
-}
-/*Style the 2nd, 3rd, and 4th paragraphs */
-.row-2{
-    display: flex;
+body {
+    padding: 0 0 1em;
 }
 
-.row-2 > p:nth-child(1){
-    background-color: orange;
-    margin-right: 1rem;
-    padding: 1rem;
+header {
+    background-color: #333;
+    color: #fff;
+    border: 5px solid #000;
 }
 
-.row-2 > p:nth-child(2){
-    background-color: orange;
-    margin-right: 1rem;
-    padding: 1rem;
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.row-2 > p:nth-child(3){
-    background-color: orange;
-    padding: 1rem;
-}
-/*Style the footer */
-footer{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid #999;
 }
 
-footer > a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orangered;
-    padding: 1rem;
-    margin-right: 0.2rem;
-    width: 100%;
-    height: 2.5rem;
-    flex-shrink: 2;
+header .title {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
 }
 
-footer > p:nth-child(1){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    padding: 1rem;
-    width: 100%;
-    height: 2.5rem;
+main {
+    padding: 0 1em;
 }
 
-footer > p:nth-child(2){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    padding: 1rem;
-    margin-right: 0.2rem;
-    width: 100%;
-    height: 2.5rem;
+.cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards li {
+    border: 5px solid #000;
+    margin-bottom: 1em;
+}
+
+.cards h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+.cards .inner {
+    padding: 0.5em 1em;
+}
+
+.sidebar {
+    background-color: #333;
+    border: 5px solid #000;
+    padding: 0.5em 1em;
+    color: #fff;
+}
+
+/* Responsive Stuff Here! */
+
+@media screen and (min-width: 1024px){
+
+    body{
+        margin: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        border: 5px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border-top: none;
+    }
+
+    header .title {
+        font-size: 150%;
+        font-style: italic;
+        font-weight: bold;
+        padding: 1em;
+    }
+
+    main {
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-row: span 3;
+        grid-gap: 1rem;
+    }
+
+    .cards li {
+        border: 5px solid #000;
+        margin-bottom: 1em;
+    }
+
+    .cards h2 {
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+        padding: 0.5em 1em;
+    }
+
+    .cards .inner {
+        padding: 0.5em 1em;
+    }
+
+    .sidebar {
+        background-color: #333;
+        border: 5px solid #000;
+        padding: 1rem 1rem;
+        color: #fff;
+        display: grid;
+
+    }
+
 }
